@@ -96,8 +96,10 @@ img:hover {
 }
 
 .skip:focus {
-    background-color: greenyellow;
-    left: 0px;
+    background-color: black;
+    color: white;
+    left: 10px;
+    z-index: 1;
 }
 
 
@@ -144,6 +146,10 @@ figure{
 }
 
 .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card:focus .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -264,6 +270,15 @@ footer {
     .home_img{
         animation-name: none;
     }
+
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+
+    .flip-card:focus .flip-card-inner {
+        transform: none;
+    }
+
 }
 
 @media screen and (min-width: 480px){
@@ -309,9 +324,7 @@ footer {
 
 @media screen and (min-width: 830px){
     .home_gallery {
-        display: flex;
         justify-content: space-around;
-        margin: 1.25rem;
     }
 
     .gallery {
