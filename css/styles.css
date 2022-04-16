@@ -1,0 +1,348 @@
+/* body
+padding
+margin
+line-height
+font-family. */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: darkblue;
+    color: white;
+    margin-bottom: 40px;
+    padding: 2%;
+}
+
+nav{
+    text-align: center;
+    margin: 10px;
+}
+
+nav ul {
+    padding: 5px;
+}
+
+nav li{
+	padding:5px;
+	width: auto;
+	display: inline-block;
+    border-radius: 2px;
+    text-decoration: underline;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+nav a {
+    color: white;
+}
+
+/*
+COLLEEN -
+I would move some of the hover stuff into active.active
+Color alone to signify  */
+
+nav a:hover{
+    background-color: white;
+    font-family: monospace;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1rem;
+}
+
+li.active {
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+/* a:hover{
+    color: black;
+} */
+
+img {
+    border: 3px solid black;
+    margin: 15px;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: coral;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    overflow:scroll;
+}
+
+img:hover {
+    box-shadow: 10px 10px dodgerblue;
+}
+
+.skip {
+    color: black;
+    position:fixed;
+    left: -500px;
+}
+
+.skip:focus {
+    background-color: greenyellow;
+    left: 0px;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 5px;
+    justify-items: center;
+    margin: 1.25rem;
+}
+
+.home_gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 5px;
+    justify-items: center;
+    margin: 1.25rem;
+}
+
+figure{
+    max-width: 80%;
+    margin: 10px;
+    text-align: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.flip-card-inner {
+    border: 3px solid black;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: coral;
+    color: black;
+}
+
+.flip-card-front img {
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+    background-color: none;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    overflow:scroll;
+}
+
+.flip-card-front img:hover {
+    box-shadow: none;
+}
+
+.flip-card-back {
+    background-color: coral;
+    transform: rotateY(180deg);
+}
+
+.text {
+    margin: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.contact_form {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.submit_button {
+    background-color: greenyellow;
+}
+
+.contact_form_img{
+    background: lightskyblue url(../images/background.jpg);
+    opacity: .3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+footer {
+    text-align: center;
+}
+
+.contact_form_container {
+    overflow: hidden;
+}
+
+.home_img{
+    animation-name: home_img;
+    animation-duration: 5s;
+}
+
+label {
+    font-weight: bolder;
+}
+
+
+.lightbox .lb-image {
+    margin: 0;
+    background-color: white;
+    padding: 0;
+}
+
+.lightbox .lb-image:hover {
+    box-shadow: 0px 0px white;
+}
+
+.lb-data .lb-caption {
+    font-size: 16px;
+}
+
+footer {
+    margin: 20px;
+}
+
+@keyframes home_img{
+    from {width: 10px; opacity: 0;}
+    to {width: 150px; opacity: 1;}
+}
+
+@media (prefers-reduced-motion) {
+    .home_img{
+        animation-name: none;
+    }
+}
+
+@media screen and (min-width: 480px){
+    .home_gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1.25rem;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        margin: 1.25rem;
+    }
+
+    figure:last-child{
+        grid-column: span 2;
+    }
+
+    img:last-child{
+        grid-column: span 2;
+    }
+
+    a:last-child{
+        grid-column: span 2;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul{
+        width: 100%;
+    }
+
+    header{
+        position: sticky;
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 830px){
+    .home_gallery {
+        display: flex;
+        justify-content: space-around;
+        margin: 1.25rem;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        margin: 1.25rem;
+    }
+
+    .gallery img:last-child{
+        grid-column: 2 / span 2;
+    }
+
+    a:last-child{
+        grid-column: 2 / span 2;
+    }
+
+    .gallery a:last-child{
+        grid-column: 2 / span 2;
+    }
+
+    figure:last-child{
+        grid-column: 2 / span 2;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul{
+        width: 100%;
+    }
+
+}
