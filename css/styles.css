@@ -26,6 +26,7 @@ header {
 nav{
     text-align: center;
     margin: 10px;
+    font-size: 18px;
 }
 
 nav ul {
@@ -43,6 +44,11 @@ nav li{
 p{
     text-align: center;
     margin-bottom: 4vh;
+    font-size: 18px;
+}
+
+figcaption {
+    font-size: 18px;
 }
 
 nav a {
@@ -320,9 +326,14 @@ footer {
         position: sticky;
         top: 0;
     }
+
+    img {
+        height: 200px;
+        width: 200px;
+    }
 }
 
-@media screen and (min-width: 830px){
+@media screen and (min-width: 1200px){
     .home_gallery {
         justify-content: space-around;
     }
@@ -356,6 +367,11 @@ footer {
 
     nav ul{
         width: 100%;
+    }
+
+    img {
+        height: 300px;
+        width: 300px;
     }
 
 }
